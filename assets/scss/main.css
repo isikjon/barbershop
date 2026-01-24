@@ -1,0 +1,681 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(https://db.onlinewebfonts.com/c/81545d957282b467cd748029b4e4d18e?family=Vasek);
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Normalize CSS */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.6;
+  font-family: "Be Vietnam Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make links inherit color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Additional resets */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url("../img/hero.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.header .container {
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__btn-outline {
+  padding: 12px 30px;
+  color: #fff;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 72%;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+}
+.main__btn-outline:hover {
+  background-color: #8F682E;
+  color: #fff;
+  border-color: #8F682E;
+}
+
+.main__btn-gold {
+  padding: 12px 50px;
+  color: #fff;
+  background: #8F682E;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 72%;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  min-width: 300px;
+  max-height: 48px;
+}
+.main__btn-gold:hover {
+  background-color: #BB873A;
+}
+
+.main__btn-card {
+  padding: 12px 50px;
+  color: #fff;
+  background: #212121;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 72%;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  min-width: 100%;
+  max-height: 48px;
+}
+.main__btn-card:hover {
+  background-color: #BB873A;
+}
+
+.navbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__brand img {
+  max-width: 100px;
+}
+.navbar__links {
+  display: flex;
+  gap: 40px;
+}
+.navbar__links ul {
+  display: flex;
+  gap: 25px;
+}
+.navbar__links ul a {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  padding-bottom: 5px;
+}
+.navbar__links ul a:hover {
+  color: #8F682E;
+}
+.navbar__block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar__menu-language {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.navbar__menu-language a {
+  color: #fff;
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 72%;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+.navbar__menu-language a:hover {
+  color: #8F682E;
+}
+.navbar__menu-language-active {
+  color: #8F682E !important;
+}
+.navbar__block-cart {
+  position: relative;
+}
+.navbar__block-cart span {
+  position: absolute;
+  right: -12px;
+  top: 5px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 9%;
+  text-transform: uppercase;
+  background-color: #8F682E;
+  color: #fff;
+  border-radius: 100%;
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 130px;
+}
+.slider__left {
+  width: 50%;
+}
+.slider__right {
+  width: 50%;
+}
+.slider__arrows {
+  position: absolute;
+  bottom: -50px;
+  left: -74px;
+}
+.slider__arrows p {
+  max-width: 337px;
+  font-size: 13px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 20px 0;
+}
+.slider__arrows-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.slider__arrows-wrapper button svg {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.slider__arrows-wrapper button svg:hover rect {
+  transition: all 400ms ease-in-out;
+  fill: #fff;
+}
+.slider__arrows-wrapper button svg:hover path {
+  transition: all 400ms ease-in-out;
+  fill: #212121;
+}
+.slider__arrows-wrapper h3 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 94%;
+  letter-spacing: -3px;
+  color: #fff;
+}
+.slider__content {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+.slider__content-left {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+}
+.slider__content-left img {
+  max-width: 220px;
+}
+
+.about {
+  padding: 100px 0;
+}
+.about__text-wrapper-first {
+  display: flex;
+  margin: 20px 0;
+}
+.about__text-wrapper-first-left {
+  width: 20%;
+}
+.about__text-wrapper-first-right {
+  width: 80%;
+}
+.about__text-wrapper-first-right p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 94%;
+  letter-spacing: -3px;
+  color: #212121;
+}
+.about__text-wrapper-first-right p span {
+  color: #8F682E;
+  font-size: 84px;
+}
+.about__text-wrapper-second {
+  display: flex;
+}
+.about__text-wrapper-second-left {
+  width: 47%;
+}
+.about__text-wrapper-second-right {
+  width: 53%;
+}
+.about__text-wrapper-second-right p {
+  max-width: 527px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 9%;
+  text-transform: uppercase;
+  color: #212121;
+  margin: 20px 0;
+}
+
+.work__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+.work__intro h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 800;
+  font-size: 112px;
+  line-height: 72%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #212121;
+}
+.work__slider-wrapper {
+  position: relative;
+  margin: 40px 0;
+}
+.work__slider-arrows-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+.work__slider-arrows-wrapper button {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  width: 48px;
+  height: 48px;
+}
+.work__slider-arrows-wrapper button svg {
+  display: block;
+}
+.work__slider-arrows-wrapper button svg rect {
+  transition: all 200ms ease-in-out;
+}
+.work__slider-arrows-wrapper button svg path {
+  transition: all 200ms ease-in-out;
+}
+.work__slider-arrows-wrapper button:hover svg rect {
+  fill: #8F682E;
+}
+.work__slider-arrows-wrapper button:hover svg path {
+  fill: #fff;
+}
+
+.workSwiper {
+  width: 100%;
+  height: 100%;
+}
+.workSwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.services {
+  background-image: url("../img/services.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  margin: 250px 0;
+  min-height: 1700px;
+}
+.services__content {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+.services__intro {
+  margin-top: 60px;
+}
+.services__intro h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 700;
+  font-size: 233px;
+  line-height: 72%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  white-space: nowrap;
+}
+.services__intro h2 span {
+  margin-top: 100px;
+}
+.services__table {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.services__table-item-wrapper h2 {
+  color: #8F682E;
+  font-family: "Vasek", sans-serif;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 160%;
+  letter-spacing: 3%;
+  margin-left: -60px;
+}
+.services__table-item-wrapper-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  color: #fff;
+  margin: 10px 0;
+}
+.services__table-item-wrapper-list p {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 72%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.services__table-item-wrapper-list-item {
+  display: flex;
+  justify-content: space-between;
+  min-width: 250px;
+  gap: 50px;
+}
+.services__table-item-wrapper-list-item p {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 40px;
+  line-height: 72%;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+.services__table-item-wrapper-list-item p:nth-child(1) {
+  color: #9C9C9C;
+}
+.services__book {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.services__book img {
+  position: absolute;
+  left: 15%;
+  top: -350%;
+  max-width: 278px;
+}
+
+.products__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 6px solid #212121;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 30px 50px 30px;
+}
+.products__intro h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 800;
+  font-size: 112px;
+  line-height: 72%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #212121;
+}
+.products__slider-wrapper {
+  margin: 50px 0;
+  position: relative;
+}
+.products__slider-item {
+  max-width: 490px;
+}
+.products__slider-item-head a {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-decoration: none;
+}
+.products__slider-item-head a span {
+  text-decoration: underline;
+}
+.products__slider-item-intro {
+  display: flex;
+  justify-content: space-between;
+}
+.products__slider-item-intro h3 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 96%;
+  text-transform: uppercase;
+  color: #212121;
+}
+.products__slider-item-intro p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #212121;
+}
+.products__slider-item-subtitle {
+  margin: 20px 0;
+  max-height: 120px;
+  min-height: 120px;
+  height: 100%;
+}
+.products__slider-item-subtitle p {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #212121;
+}
+.products__slider-arrows-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+.products__slider-arrows-wrapper button {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  width: 48px;
+  height: 48px;
+}
+.products__slider-arrows-wrapper button svg {
+  display: block;
+}
+.products__slider-arrows-wrapper button svg rect {
+  transition: all 200ms ease-in-out;
+}
+.products__slider-arrows-wrapper button svg path {
+  transition: all 200ms ease-in-out;
+}
+.products__slider-arrows-wrapper button:hover svg rect {
+  fill: #8F682E;
+}
+.products__slider-arrows-wrapper button:hover svg path {
+  fill: #fff;
+}
+
+.productsSwiper {
+  width: 100%;
+  height: 100%;
+}
+.productsSwiper .swiper-slide {
+  height: auto;
+}
+
+.team {
+  min-height: 3168px;
+  background-image: url("../img/team.webp");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 250px;
+  padding: 250px 0;
+}
+.team__bio-intro {
+  margin-top: 140px;
+}
+.team__bio-intro h2 {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: 800;
+  font-size: 112px;
+  line-height: 72%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.team__bio-cards {
+  margin-top: 70px;
+  position: relative;
+}
+.team__bio-cards img {
+  max-width: 920px;
+}
+.team__bio-person img {
+  position: absolute;
+  right: 0;
+  top: -60%;
+  max-width: 700px;
+}/*# sourceMappingURL=main.css.map */
