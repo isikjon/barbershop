@@ -629,7 +629,7 @@
 }
 
 .team {
-    min-height: 3168px;
+    min-height: 2568px;
     background-image: url("../img/team.webp");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -638,6 +638,7 @@
 
     &__bio-intro {
         margin-top: 140px;
+
         h2 {
             font-family: "Alumni Sans", sans-serif;
             font-weight: 800;
@@ -648,19 +649,299 @@
             color: #fff;
         }
     }
+
     &__bio-cards {
         margin-top: 70px;
         position: relative;
+
         img {
             max-width: 920px;
         }
     }
+
     &__bio-person {
         img {
             position: absolute;
             right: 0;
             top: -60%;
             max-width: 700px;
+        }
+    }
+}
+
+.reviews {
+    &__wrapper {
+        margin-top: 300px;
+    }
+
+    &__intro {
+        display: flex;
+        align-items: flex-end;
+
+        h2 {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 800;
+            font-style: ExtraBold;
+            font-size: 112px;
+            line-height: 72%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        p {
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 9%;
+            text-transform: uppercase;
+            color: #fff;
+            margin-left: 40px;
+            max-width: 310px;
+
+            span {
+                color: #FD4C22;
+            }
+
+        }
+    }
+
+    &__slider-wrapper {
+        margin: 50px 0;
+        position: relative;
+    }
+
+    &__slider-item {
+        background-image: url("../img/review_bg.png");
+        padding: 24px;
+        max-width: 503px;
+        max-height: 503px;
+    }
+
+    &__slider-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__slider-body {
+        margin-top: 40px;
+
+        h5 {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 96%;
+            text-transform: uppercase;
+
+        }
+
+        p {
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            margin-top: 20px;
+        }
+    }
+
+    &__slider-arrows-wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin: 40px auto;
+
+        button {
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+            width: 48px;
+            height: 48px;
+
+            svg {
+                display: block;
+
+                rect {
+                    transition: all 200ms ease-in-out;
+                }
+
+                path {
+                    transition: all 200ms ease-in-out;
+                }
+            }
+
+            &:hover {
+                svg {
+                    rect {
+                        fill: $gold;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Swiper styles for reviews
+.reviewsSwiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+.wave {
+    background-image: url("../img/wave.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -300px;
+    min-height: 1685px;
+
+    &__intro {
+        padding-top: 400px;
+
+        h2 {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 800;
+            font-size: 112px;
+            line-height: 72%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #212121;
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        margin: 50px 0;
+    }
+
+    &__subtitle-left {
+        width: 60%;
+    }
+
+    &__subtitle-right {
+        width: 30%;
+
+        p {
+            max-width: 90%;
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 9%;
+            text-transform: uppercase;
+            color: #212121;
+        }
+    }
+
+    &__more {
+        margin-top: 450px;
+
+        a {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 72%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-left: 50px;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+}
+
+.cute {
+    background-image: url("../img/cuts.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 1395px;
+    margin-top: -280px;
+
+    &__intro {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-top: 450px;
+
+        h2 {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 700;
+            font-size: 272px;
+            line-height: 72%;
+            letter-spacing: 2px;
+            text-align: center;
+            vertical-align: middle;
+            text-transform: uppercase;
+            color: #fff;
+
+        }
+    }
+}
+
+.voucher {
+    background-image: url("../img/voucher.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 3170px;
+    margin-top: -450px;
+
+    &__gift-wrapper {
+        padding: 350px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__gift-wrapper-intro {
+        position: relative;
+        h2 {
+            font-family: "Alumni Sans", sans-serif;
+            font-weight: 800;
+            font-size: 112px;
+            line-height: 72%;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+
+        }
+
+        p {
+            font-family: "Be Vietnam Pro", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 120%;
+            letter-spacing: 9%;
+            text-transform: uppercase;
+            color: #fff;
+            margin-left: 170px;
+            position: absolute;
+            top: 20px;
+        }
+    }
+    &__gift-wrapper-btn {
+        margin-top: 200px;
+        position: relative;
+        button {
+            z-index: 10000;
+        }
+        img {
+            position: absolute;
+            top: -185%;
+            z-index: 9000;
+        }
+    }
+    &__gift-wrapper-cupon {
+        img {
+            max-width: 800px;
         }
     }
 }
